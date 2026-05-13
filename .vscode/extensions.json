@@ -1,7 +1,7 @@
 {
-	"recommendations": [
-		"raczzalan.webgl-glsl-editor",
-		"dbaeumer.vscode-eslint",
-		"esbenp.prettier-vscode"
-	]
+    "recommendations": [
+        "raczzalan.webgl-glsl-editor",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+    ]
 }

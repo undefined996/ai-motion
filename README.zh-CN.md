@@ -25,9 +25,9 @@ npm install ai-motion
 import { Motion } from 'ai-motion'
 
 const motion = new Motion({
-	width: 400,
-	height: 300,
-	mode: 'light'
+    width: 400,
+    height: 300,
+    mode: 'light',
 })
 
 document.body.appendChild(motion.element)
@@ -120,16 +120,16 @@ document.body.appendChild(motion.element)
 
 ```ts
 interface MotionOptions {
-	width?: number // Canvas 宽度（默认：600）
-	height?: number // Canvas 高度（默认：600）
-	ratio?: number // 设备像素比倍数（默认：devicePixelRatio）
-	mode?: 'dark' | 'light' // 颜色优化（默认：'light'）
-	colors?: [CSSRgbString, CSSRgbString, CSSRgbString, CSSRgbString] // 颜色列表（默认：见下文）
-	borderWidth?: number // 边框厚度（默认：8）
-	glowWidth?: number // 发光效果宽度（默认：200）
-	borderRadius?: number // 圆角半径（默认：8）
-	classNames?: string // Canvas 的 CSS 类名
-	styles?: Partial<CSSStyleDeclaration> // Canvas 的 CSS 样式
+    width?: number // Canvas 宽度（默认：600）
+    height?: number // Canvas 高度（默认：600）
+    ratio?: number // 设备像素比倍数（默认：devicePixelRatio）
+    mode?: 'dark' | 'light' // 颜色优化（默认：'light'）
+    colors?: [CSSRgbString, CSSRgbString, CSSRgbString, CSSRgbString] // 颜色列表（默认：见下文）
+    borderWidth?: number // 边框厚度（默认：8）
+    glowWidth?: number // 发光效果宽度（默认：200）
+    borderRadius?: number // 圆角半径（默认：8）
+    classNames?: string // Canvas 的 CSS 类名
+    styles?: Partial<CSSStyleDeclaration> // Canvas 的 CSS 样式
 }
 ```
 
@@ -147,11 +147,11 @@ interface MotionOptions {
 **默认颜色：**
 
 ```ts
-[
-	'rgb(57, 182, 255)', // 青色
-	'rgb(189, 69, 251)', // 紫色
-	'rgb(255, 87, 51)', // 橙色
-	'rgb(255, 214, 0)' // 黄色
+;[
+    'rgb(57, 182, 255)', // 青色
+    'rgb(189, 69, 251)', // 紫色
+    'rgb(255, 87, 51)', // 橙色
+    'rgb(255, 214, 0)', // 黄色
 ]
 ```
 
@@ -159,12 +159,12 @@ interface MotionOptions {
 
 ```ts
 const motion = new Motion({
-	colors: [
-		'rgb(255, 0, 128)', // 粉色
-		'rgb(128, 0, 255)', // 紫色
-		'rgb(0, 128, 255)', // 蓝色
-		'rgb(0, 255, 128)' // 绿色
-	]
+    colors: [
+        'rgb(255, 0, 128)', // 粉色
+        'rgb(128, 0, 255)', // 紫色
+        'rgb(0, 128, 255)', // 蓝色
+        'rgb(0, 255, 128)', // 绿色
+    ],
 })
 ```
 
@@ -181,13 +181,13 @@ const motion = new Motion({
 
 ```ts
 const motion = new Motion({
-	width: document.documentElement.clientWidth,
-	height: document.documentElement.clientHeight,
-	mode: 'dark',
-	styles: {
-		position: 'fixed',
-		inset: '0'
-	}
+    width: document.documentElement.clientWidth,
+    height: document.documentElement.clientHeight,
+    mode: 'dark',
+    styles: {
+        position: 'fixed',
+        inset: '0',
+    },
 })
 
 document.body.appendChild(motion.element)

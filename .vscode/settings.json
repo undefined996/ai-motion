@@ -1,7 +1,11 @@
 {
-	"cSpell.words": ["fract", "fwidth", "glsl", "lowp", "smoothstep"],
-	"webgl-glsl-editor.format.favorFloatingSuffix": false,
-	"[glsl]": {
-		"editor.defaultFormatter": "raczzalan.webgl-glsl-editor"
-	}
+    "cSpell.words": ["fract", "fwidth", "glsl", "lowp", "smoothstep"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "[glsl]": {
+        "editor.defaultFormatter": "raczzalan.webgl-glsl-editor"
+    },
+    "webgl-glsl-editor.format.favorFloatingSuffix": false,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true
 }

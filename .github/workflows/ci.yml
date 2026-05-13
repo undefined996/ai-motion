@@ -1,6 +1,6 @@
+name: CI
 permissions:
   contents: read
-name: CI
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [20, 22]
+        node-version: [24]
 
     steps:
       - uses: actions/checkout@v6
@@ -25,10 +25,13 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Lint
-        run: npx eslint . && npx prettier --check **/*.ts
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
 
       - name: Build library
         run: npm run build

@@ -1,22 +1,34 @@
 import js from '@eslint/js'
-import prettier from 'eslint-config-prettier'
-import prettierPlugin from 'eslint-plugin-prettier'
 import { defineConfig, globalIgnores } from 'eslint/config'
+import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
 export default defineConfig([
+	globalIgnores(['build/*', 'build-demo/*', 'node_modules', 'src/**/__*.ts']),
 	js.configs.recommended,
-	prettier,
 	{
+		files: ['**/*.ts'],
+		extends: [tseslint.configs.recommended],
+		languageOptions: {
+			parserOptions: {
+				projectService: true,
+			},
+			ecmaVersion: 2022,
+			globals: { ...globals.browser, ...globals.node },
+		},
+		rules: {
+			'@typescript-eslint/no-explicit-any': 'off',
+			'@typescript-eslint/no-unused-vars': 'off',
+			'@typescript-eslint/no-non-null-assertion': 'off',
+			'@typescript-eslint/no-inferrable-types': 'off',
+		},
+	},
+	{
+		files: ['**/*.js'],
 		languageOptions: {
 			ecmaVersion: 2022,
 			sourceType: 'module',
-		},
-		plugins: {
-			prettier: prettierPlugin,
-		},
-		rules: {
-			'prettier/prettier': 'error',
+			globals: { ...globals.browser, ...globals.node },
 		},
 	},
-	globalIgnores(['build/*', 'build-demo/*']),
 ])
