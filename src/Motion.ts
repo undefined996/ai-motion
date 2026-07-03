@@ -15,8 +15,7 @@ import vertexShaderSource from './gl/shaders/vertex.glsl'
  * @example 'rgb(255, 0, 0)' or 'rgb(255,0,0)'
  */
 export type CSSRgbString =
-	| `rgb(${number}, ${number}, ${number})`
-	| `rgb(${number},${number},${number})`
+	`rgb(${number}, ${number}, ${number})` | `rgb(${number},${number},${number})`
 
 export type MotionOptions = {
 	/**
